@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Design HW3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<main>
+    <header>
+        <h1>HW3 - Ngrok Exposed Local Web Hosting</h1>
+        <h5>Clay Karow</h5>
+    </header>
+
+    <body>
+        <h2>Exposing Localhost with Ngrok</h2>
+        <p>Ngrok is a tool that allows developers expose a url or local server to the public. This is used for:</p>
+        <ul>
+            <li>Testing webhooks</li>
+            <li>Sharing work in progress</li>
+            <li>Remote access to local servers</li>
+            <li>Free web hosting</li>
+        </ul>
+        <h3>Key Reasons to use Ngrok</h3>
+        <ul>
+            <li>Easy to set up and use</li>
+            <li>Secure tunnels with HTTPS</li>
+            <li>Inspect traffic and replay requests</li>
+        </ul>
+        <h3>Steps to Use Ngrok</h3>
+        <ol>
+            <li>Download and install Ngrok</li>
+            <ul>
+                <li>Visit the <a href="https://ngrok.com/download">Ngrok download page</a></li>
+                <li><strong>For Mac, use brew install ngrok</strong></li>
+                <li>For Windows, <strong>download the zip file and extract it</strong></li>
+            </ul>
+            <li>Sign up for a free account to get an authentication token</li>
+            <li>
+                Connect your account using the command:
+                <pre><code>ngrok authtoken YOUR_AUTH_TOKEN</code></pre>
+            </li>
+            <li>
+                In the terminal, run the command:
+                <pre><code>ngrok http http://localhost:3000</code></pre>
+            </li>
+            <li>Ngrok is now exposing the backend or url hosted on localhost:3000</li>
+            <li>Ngrok will provide a public URL (e.g., https://abcd1234.ngrok.io) that tunnels to your local server</li>
+            <li>Follow the link in the console to a web browser to test your api or view your webpage</li>
+        </ol>
+        <p>Boom. Easy money in the bag. It's just that easy.</p>
+    </body>
+</main>
