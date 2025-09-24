@@ -107,7 +107,7 @@ h5 {
 /* Recipe Images Grid */
 .recipe-images {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
     gap: 1rem;
     margin: 2rem 0;
     justify-items: center;
