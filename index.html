@@ -5,51 +5,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Web Design HW3</title>
+    <title>Web Design Unit 1 Final</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <main>
-    <header>
-        <h1>HW3 - Ngrok Exposed Local Web Hosting</h1>
-        <h5>Clay Karow</h5>
+    <header class="hero-header">
+        <div class="header-background">
+            <img src="images/banner.jpg" alt="Hokkaido Milk Burger Buns Banner" class="header-banner-image">
+        </div>
+        <div class="header-content">
+            <div class="course-info">
+                <h1>Unit 1 Final</h1>
+                <h5>Clay Karow</h5>
+            </div>
+            <div class="recipe-title">
+                <h1 class="main-title">Hokkaido Milk Burger Buns Recipe</h1>
+            </div>
+        </div>
     </header>
 
-    <body>
-        <h2>Exposing Localhost with Ngrok</h2>
-        <p>Ngrok is a tool that allows developers expose a url or local server to the public. This is used for:</p>
-        <ul>
-            <li>Testing webhooks</li>
-            <li>Sharing work in progress</li>
-            <li>Remote access to local servers</li>
-            <li>Free web hosting</li>
-        </ul>
-        <h3>Key Reasons to use Ngrok</h3>
-        <ul>
-            <li>Easy to set up and use</li>
-            <li>Secure tunnels with HTTPS</li>
-            <li>Inspect traffic and replay requests</li>
-        </ul>
-        <h3>Steps to Use Ngrok</h3>
-        <ol>
-            <li>Download and install Ngrok</li>
-            <ul>
-                <li>Visit the <a href="https://ngrok.com/download">Ngrok download page</a></li>
-                <li><strong>For Mac, use brew install ngrok</strong></li>
-                <li>For Windows, <strong>download the zip file and extract it</strong></li>
-            </ul>
-            <li>Sign up for a free account to get an authentication token</li>
-            <li>
-                Connect your account using the command:
-                <pre><code>ngrok authtoken YOUR_AUTH_TOKEN</code></pre>
-            </li>
-            <li>
-                In the terminal, run the command:
-                <pre><code>ngrok http http://localhost:3000</code></pre>
-            </li>
-            <li>Ngrok is now exposing the backend or url hosted on localhost:3000</li>
-            <li>Ngrok will provide a public URL (e.g., https://abcd1234.ngrok.io) that tunnels to your local server</li>
-            <li>Follow the link in the console to a web browser to test your api or view your webpage</li>
-        </ol>
-        <p>Boom. Easy money in the bag. It's just that easy.</p>
-    </body>
+    <div class="content-wrapper">
+        <grid class="recipe-images">
+            <img src="images/dinner_rolls.jpg" alt="Hokkaido Milk Burger Buns Sliced" width="300">
+        </grid>
+
+        <section class="about-section">
+            <h2>About This Recipe</h2>
+            <div class="about-content">
+                <div class="about-story">
+                    <h3>My Journey</h3>
+                    <p>I started making this recipe during the Covid-19 Lockdown as a way to explore my newfound love of
+                        cooking. I always liked making cookies with my mom, but they got way too easy and I wanted to
+                        make
+                        something other than cookies. I believe this was one of the first things I tried. I failed
+                        miserably my
+                        first time around. Yeast is a hard thing to work with if you haven't done it before. But after a
+                        while,
+                        it became second nature. This was essentially a gateway drug to other baked goods for me. After
+                        this, I
+                        started experimenting with other recipes and techniques. I have made calzones, chicago style
+                        deep dish
+                        pizza, hotdog buns, cinnamon rolls, and sandwich bread. It pushed me to learn something new, and
+                        now my
+                        family keeps throwing other crazy recipes at me.</p>
+                </div>
+
+                <div class="about-recipe">
+                    <h3>About Hokkaido Milk Bread</h3>
+                    <p>This recipe is for Hokkaido Milk Bread Burger Buns. Hokkaido milk bread is a type of Japanese
+                        bread
+                        known for its soft, fluffy texture and slightly sweet flavor. The key to achieving this texture
+                        lies in
+                        the use of a technique called tangzhong, which involves cooking a portion of flour, water, and
+                        milk into a
+                        pre-hydrated paste. This recipe can be a multi-purpose recipe, as you can also make dinner
+                        rolls. The
+                        ingredient portions are slightly different, but the process is the same. These buns are perfect
+                        for
+                        burgers, sandwiches, or simply enjoyed on their own with a bit of butter. One of my favorite
+                        things to do is to make steak sandwiches with gouda and aioli alongside the buns.</p>
+                </div>
+            </div>
+        </section>
+        <section class="ingredients-section">
+            <h2>Ingredients:</h2>
+            <div class="ingredient-category">
+                <h3>Tangzhong:</h3>
+                <ul class="ingredient-list">
+                    <li>2 tablespoons bread flour</li>
+                    <li>2 tablespoons water</li>
+                    <li>4 tablespoons milk</li>
+                </ul>
+            </div>
+            <div class="ingredient-category">
+                <h3>Dough:</h3>
+                <ul class="ingredient-list">
+                    <li>1/2 cup warm milk</li>
+                    <li>1 tablespoon instant yeast</li>
+                    <ul>
+                        <li>Milk should be about 95°F so as to not kill the yeast.</li>
+                    </ul>
+                    <li>2 1/2 cups bread flour</li>
+                    <li>1 teaspoon salt</li>
+                    <li>2 1/2 tablespoons sugar</li>
+                    <li>1 large egg + 1 egg yolk</li>
+                    <li>3 tablespoons unsalted butter, softened</li>
+                    <ul></ul>
+                    <li>Make sure the butter is at room temperature for easy mixing.</li>
+                    <li>It is important that the butter is unsalted. If there is extra salt, it will mess with the
+                        bread's crumb.</li>
+                </ul>
+                <li>Tangzhong (from above)</li>
+                </ul>
+            </div>
+
+            <div class="ingredient-category">
+                <h3>For Assembly:</h3>
+                <ul class="ingredient-list">
+                    <li>1 egg, beaten (for egg wash)</li>
+                    <li>Sesame seeds (optional, for topping)</li>
+                </ul>
+            </div>
+        </section>
+        <section class="instructions-section">
+            <h2>Instructions:</h2>
+            <div class="instruction-step">
+                <h3>Make the Tangzhong:</h3>
+                <ol class="instruction-list">
+                    <li>In a small saucepan, whisk together the bread flour, water, and milk until smooth.</li>
+                    <li>Cook over medium heat, stirring constantly, until the mixture thickens to a pudding-like
+                        consistency (about 3-5 minutes).</li>
+                    <li>Remove from heat and let it cool to room temperature.</li>
+                </ol>
+            </div>
+            <div class="instruction-step">
+                <h3>Prepare the Dough:</h3>
+                <ol class="instruction-list">
+                    <li>In a large mixing bowl, combine the warm milk and instant yeast. Let it sit for about 10 minutes
+                        until bloomed.</li>
+                    <li>Add the bread flour, salt, and sugar to the bowl. Mix together until well combined.</li>
+                    <li>Add the cooled tangzhong and the eggs to the bowl and mix until fully incorporated.</li>
+                    <li>After <strong>everything</strong> is fully combined, add the softened butter one tablespoon at
+                        a time and mix until fully incorporated.</li>
+                    <li>Knead the dough until it becomes smooth and elastic (about 10-15 minutes by hand or 8-10 minutes
+                        using a stand mixer with a dough hook).</li>
+                    <li>Place the dough in a lightly greased bowl, cover it with a damp cloth or plastic wrap, and let
+                        it rise in a warm place for about 1-1 1/2 hours or until it doubles in size.
+                        <div class="instruction-note">An oven with the light on is a good place for this.</div>
+                    </li>
+                </ol>
+            </div>
+            <div class="instruction-step">
+                <h3>Shape and Bake the Bread:</h3>
+                <ol class="instruction-list">
+                    <li>Punch down the risen dough to release any air bubbles.</li>
+                    <li>Divide the dough into 8 equal portions. Roll each portion into a ball.</li>
+                    <li>Place the dough balls on a greased baking sheet. Once all are shaped, cover with another baking
+                        sheet or plastic wrap. Let proof for 2 hours.
+                        <div class="instruction-note">While the dough is proofing, preheat the oven to 375°F.</div>
+                    </li>
+                    <li>Once the dough has proofed, brush the tops with the beaten egg mixture (one egg and a splash of
+                        milk) and sprinkle with sesame seeds if desired.</li>
+                    <li>Bake the buns in the preheated oven for 15-20 minutes or until golden brown.</li>
+                    <li>Let cool for about a half hour. If you cut them before cool, they will dry out and crumble. The
+                        crumb will also not be very good and consistent.</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+</main>
 </main>

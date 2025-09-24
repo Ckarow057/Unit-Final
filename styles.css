@@ -1,16 +1,196 @@
 body {
     font-family: 'Kode Mono', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 20px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
     border-radius: 8px;
+}
+
+main {
+    margin: 0;
+    padding: 0;
 }
 
 h5 {
     font-weight: 700;
 }
 
-header {
+/* Hero Header with Banner Image */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.header-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.6);
+}
+
+.header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.course-info {
     text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    align-self: center;
+    margin-bottom: auto;
+}
+
+.course-info h1 {
+    margin: 0 0 0.5rem 0;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.course-info h5 {
+    margin: 0;
+    color: white;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-title {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    align-self: center;
+    margin-top: auto;
+}
+
+.main-title {
+    margin: 0;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+}
+
+/* Content section styling */
+.content-wrapper {
+    padding: 2rem 20px;
+}
+
+/* Recipe Images Grid */
+.recipe-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-items: center;
+}
+
+.recipe-images img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-images img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Banner Design */
+@media (max-width: 768px) {
+    .hero-header {
+        height: 400px;
+    }
+
+    .header-content {
+        padding: 1.5rem;
+    }
+
+    .course-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .course-info h5 {
+        font-size: 1rem;
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .recipe-title {
+        padding: 1.5rem;
+    }
+
+    .recipe-images {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-header {
+        height: 350px;
+    }
+
+    .header-content {
+        padding: 1rem;
+    }
+
+    .course-info {
+        padding: 1rem;
+    }
+
+    .course-info h1 {
+        font-size: 1.3rem;
+    }
+
+    .course-info h5 {
+        font-size: 0.9rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .recipe-title {
+        padding: 1rem;
+    }
+
+    .content-wrapper {
+        padding: 1rem 15px;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,4 +237,274 @@ header {
     font-weight: 400;
     font-style: normal;
     font-display: swap;
+}
+
+/* About Section Styling */
+.about-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.about-story,
+.about-recipe {
+    padding: 1.25rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.about-story {
+    border-left: 4px solid #e74c3c;
+}
+
+.about-recipe {
+    border-left: 4px solid #27ae60;
+}
+
+.about-story h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #e74c3c;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.about-recipe h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #27ae60;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.about-section p {
+    margin: 0;
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+/* Desktop layout for about content */
+@media (min-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Ingredients Section Styling */
+.ingredients-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.ingredient-category {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-left: 4px solid #8ab4f8;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+
+.ingredient-category h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: #8ab4f8;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.ingredient-list {
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.ingredient-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    color: #e0e0e0;
+}
+
+.ingredient-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Recipe image styling (excluding banner) */
+.recipe-images img,
+.ingredients-section img:not(.banner-image) {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 1rem 0;
+    display: block;
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+    .about-section {
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .about-section h2 {
+        color: #000;
+        border-bottom-color: #c0392b;
+    }
+
+    .about-story,
+    .about-recipe {
+        background: rgba(0, 0, 0, 0.02);
+    }
+
+    .about-story {
+        border-left-color: #c0392b;
+    }
+
+    .about-story h3 {
+        color: #c0392b;
+    }
+
+    .about-recipe {
+        border-left-color: #229954;
+    }
+
+    .about-recipe h3 {
+        color: #229954;
+    }
+
+    .about-section p {
+        color: #333;
+    }
+
+    .ingredients-section {
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .ingredient-category {
+        background: rgba(0, 0, 0, 0.02);
+        border-left-color: #1976d2;
+    }
+
+    .ingredient-category h3 {
+        color: #1976d2;
+    }
+
+    .ingredient-list li {
+        color: #333;
+    }
+}
+
+/* Instructions Section Styling */
+.instructions-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.instruction-step {
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    border-left: 4px solid #f39c12;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+
+.instruction-step:last-child {
+    margin-bottom: 0;
+}
+
+.instruction-step h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #f39c12;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.instruction-list {
+    margin: 0;
+    padding-left: 1.8rem;
+    list-style-type: decimal;
+    counter-reset: step-counter;
+}
+
+.instruction-list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.instruction-list li:last-child {
+    margin-bottom: 0;
+}
+
+.instruction-note {
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 3px solid #ffc107;
+    border-radius: 3px;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #ffc107;
+}
+
+.instruction-list strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Light mode overrides for instructions */
+@media (prefers-color-scheme: light) {
+    .instructions-section {
+        background: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .instruction-step {
+        background: rgba(0, 0, 0, 0.02);
+        border-left-color: #e67e22;
+    }
+
+    .instruction-step h3 {
+        color: #e67e22;
+    }
+
+    .instruction-list li {
+        color: #333;
+    }
+
+    .instruction-note {
+        background: rgba(255, 193, 7, 0.15);
+        color: #b8860b;
+        border-left-color: #b8860b;
+    }
+
+    .instruction-list strong {
+        color: #000;
+    }
 }
